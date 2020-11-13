@@ -1,0 +1,47 @@
+﻿@page "/sumofintegers"
+@inject HttpClient Http
+
+<h1>The Sum of a List of Integers</h1>
+
+<p>The aim of this page is to recieve and display the sum of a list of integers sent by apirequest.io</p>
+
+@if (string.IsNullOrWhiteSpace(errorString) == false)
+{
+    <div class="h2">@errorString</div>
+}
+else if (jsonData == null)
+{
+    <div class="h4">Loading...</div>
+}
+else
+{
+    <p>Sum Of Integers: @defaultSum</p>
+
+}
+
+@code {
+    string errorString;
+    private int defaultSum = 0;
+    BlazorAppRecord1.classes.GetJsonData jsonData;
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        //this is getting the json data from a locally sourced file. If we change the BaseAddress in program.cs we can edit this to make API request
+
+        try
+        {
+            jsonData = await Http.GetFromJsonAsync<BlazorAppRecord1.classes.GetJsonData>("sample-data/randomintegers.json");
+            //jsonData = ... code relating to the GetJsonData Class that allows me to run the function GetJsonData. For example...
+            
+            errorString = null;
+        }
+        catch (Exception ex)
+        {
+            errorString = $"There was an error getting our forecast: {ex.Message}";
+        }
+
+    }
+
+
+}

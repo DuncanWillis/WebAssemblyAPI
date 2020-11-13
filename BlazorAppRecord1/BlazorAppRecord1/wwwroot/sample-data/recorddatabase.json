@@ -1,0 +1,37 @@
+﻿[
+  {
+    "releaseYear": 1978,
+    "artistName": "Gary Moore",
+    "albumName": "Back On The Streets",
+    "label": "MCA Records Inc",
+    "available": "Yes"
+  },
+  {
+    "releaseYear": 1975,
+    "artistName": "Mike Oldfield",
+    "albumName": "Ommadawn",
+    "label": "Virgin Records",
+    "available": "Yes"
+  },
+  {
+    "releaseYear": 1972,
+    "artistName": "Albert Hammond",
+    "albumName": "It Never Rains In Southern California",
+    "label": "Mums Records",
+    "available": "Yes"
+  },
+  {
+    "releaseYear": 1973,
+    "artistName": "Mahavishnu Orchestra",
+    "albumName": "Birds Of Fire",
+    "label": "CBS",
+    "available": "Yes"
+  },
+  {
+    "releaseYear": 1980,
+    "artistName": "Pete Townshend",
+    "albumName": "Empty Glass",
+    "label": "Atlantic Recording Corporation",
+    "available": "Yes"
+  }
+]
